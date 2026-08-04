@@ -1,0 +1,307 @@
+/* ================================
+   GENERAL
+================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    padding: 15px 0;
+    transition: 0.3s;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    margin-left: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    padding-top: 70px;
+}
+
+.hero-small-text {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.hero-section h1 {
+    font-size: 58px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-section h1 span {
+    color: #60a5fa;
+}
+
+.hero-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dbeafe;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-buttons .btn {
+    margin-right: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   PROFILE CIRCLE
+================================ */
+
+.profile-circle {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 5px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+
+    transition: 0.4s;
+}
+
+.profile-circle i {
+    font-size: 130px;
+}
+
+.profile-circle:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   SECTION
+================================ */
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    display: block;
+    margin: 12px auto;
+    border-radius: 5px;
+    background: #0d6efd;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+.skill-card {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.skill-card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+.skill-card h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+.project-card {
+    border: none;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .card-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.project-card .card-text {
+    line-height: 1.7;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+#contact {
+    background: #ffffff;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    margin-top: 0;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 45px;
+    }
+
+    .hero-section h2 {
+        font-size: 25px;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .profile-circle {
+        width: 220px;
+        height: 220px;
+        margin-top: 50px;
+    }
+
+    .profile-circle i {
+        font-size: 100px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 38px;
+    }
+
+    .hero-section h2 {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+}
+.developer-title {
+    justify-content: center;
+    font-size: 22px !important;
+}
+
+.developer-title img {
+    width: 38px;
+    height: 38px;
+}
