@@ -39,58 +39,113 @@ body {
 }
 
 
-/* ================================
-   HERO SECTION
-================================ */
+/* =========================
+   Hero Section
+========================= */
 
 .hero-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     background: linear-gradient(135deg, #0f172a, #1e3a8a);
     color: white;
-    padding-top: 70px;
+    min-height: 100vh;
 }
+
 
 .hero-small-text {
     font-size: 20px;
-    margin-bottom: 5px;
+    color: #38bdf8;
+    font-weight: 600;
 }
+
 
 .hero-section h1 {
-    font-size: 58px;
+    font-size: 55px;
     font-weight: 700;
-    margin-bottom: 10px;
 }
+
 
 .hero-section h1 span {
-    color: #60a5fa;
+    color: #38bdf8;
 }
 
-.hero-section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-weight: 600;
+
+.developer-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 32px;
+    margin-top: 20px;
 }
+
+
+.developer-title img {
+    width: 55px;
+    height: 55px;
+}
+
 
 .hero-description {
-    max-width: 650px;
     font-size: 18px;
     line-height: 1.7;
-    color: #dbeafe;
+    margin-top: 20px;
+    color: #e2e8f0;
 }
 
-.hero-buttons {
-    margin-top: 30px;
-}
+
+
+/* Buttons */
 
 .hero-buttons .btn {
-    margin-right: 10px;
     padding: 12px 25px;
     border-radius: 30px;
+    margin-right: 10px;
     font-weight: 600;
 }
 
+
+
+/* Profile */
+
+.profile-box {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+}
+
+
+.profile-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+
+.social-icons a {
+
+    color:white;
+    font-size:32px;
+    transition:0.3s;
+    text-decoration:none;
+
+}
+
+
+.social-icons a:hover {
+
+    color:#38bdf8;
+    transform:translateY(-5px);
+
+}
 
 /* ================================
    PROFILE CIRCLE
@@ -296,6 +351,7 @@ footer {
     }
 
 }
+
 .developer-title {
     justify-content: center;
     font-size: 22px !important;
@@ -304,4 +360,217 @@ footer {
 .developer-title img {
     width: 38px;
     height: 38px;
+}
+
+/* Profile Image */
+
+.profile-box {
+    width: 320px;
+    height: 320px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+}
+
+
+.profile-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Hero Responsive */
+
+@media(max-width: 991px) {
+
+    .hero-section {
+        text-align: center;
+        padding-top: 80px;
+    }
+
+
+    .developer-title {
+        justify-content: center;
+        font-size: 28px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .profile-box {
+        width: 250px;
+        height: 250px;
+        margin-top: 40px;
+    }
+
+}
+
+
+
+@media(max-width: 576px) {
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+
+    .developer-title {
+        font-size: 22px;
+        flex-direction: column;
+    }
+
+
+    .developer-title img {
+        width: 45px;
+        margin-bottom: 10px;
+    }
+
+
+    .profile-box {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    .hero-buttons a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+}
+
+/* ================================
+   NAVBAR SCROLL EFFECT
+================================ */
+
+.navbar.scrolled {
+    background: #020617 !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar-brand {
+    color: #38bdf8 !important;
+}
+
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #38bdf8 !important;
+}
+
+
+/* ================================
+   PROFILE IMAGE FINAL FIX
+================================ */
+
+.profile-box {
+    width: 320px;
+    height: 320px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+}
+
+
+.profile-box img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+/* ================================
+   EXTRA HERO ANIMATION
+================================ */
+
+.hero-section h1,
+.hero-description,
+.hero-buttons {
+    animation: fadeUp 1s ease;
+}
+
+
+.profile-box {
+    animation: zoomIn 1s ease;
+}
+
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+@keyframes zoomIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+
+/* ================================
+   MOBILE FINAL
+================================ */
+
+@media(max-width:576px) {
+
+    .profile-box {
+
+        width: 200px;
+        height: 200px;
+
+    }
+
+
+    .hero-section h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .developer-title {
+
+        font-size: 22px !important;
+        flex-direction: column;
+
+    }
+
 }
